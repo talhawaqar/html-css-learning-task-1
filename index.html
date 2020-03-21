@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +8,9 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
+    <div class="overlay" id="overlay">
+      <h3>Searching now</h3>
+    </div>
     <div class="hero-bg">
       <section class="top">
         <header>
@@ -25,7 +27,7 @@
               <input type="text" name="city" id="city">
               <p>Example: "Lahore"</p>
             </div>
-            <input type="button" value="Find Food Now">
+            <input type="button" value="Find Food Now" id="cta-btn">
           </form>
         </div>
       </section>
@@ -33,12 +35,21 @@
     <section class="authentic">
       <div class="right-col">
         <h2>Authentic And Awsome</h2>
-        <p><div class="20">Lorem ipsum dolor sit amet consectetur adipisicing
-            elit. Nobis veritatis molestiae rerum dicta corporis. Recusandae
-            voluptatum itaque dolores sapiente blanditiis reprehenderit
-            suscipit. Dignissimos odio quia natus laboriosam eaque ex dolor!</div></p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing
+          elit. Nobis veritatis molestiae rerum dicta corporis. Recusandae
+          voluptatum itaque dolores sapiente blanditiis reprehenderit
+          suscipit. Dignissimos odio quia natus laboriosam eaque ex dolor!</p>
       </div>
       <img src="images/food.jpeg" alt="Picture of food in bowl">
     </section>
+    <script>
+      
+      let button = document.getElementById('cta-btn');
+      let overlay = document.getElementById('overlay');
+      button.addEventListener('click',()=>{
+        overlay.style.display = 'grid';
+        overlay.classList.add('animate-overlay');
+      })
+    </script>
   </body>
 </html>
